@@ -1,7 +1,7 @@
 import sys
 import os
 
-# --- CRITICAL FIX ---
+
 # This forces Python to look inside the 'src' folder for modules
 current_dir = os.path.dirname(os.path.abspath(__file__))
 if current_dir not in sys.path:
@@ -11,7 +11,7 @@ if current_dir not in sys.path:
 from modules.nlp_processor import NLPProcessor
 from modules.feature_extractor import FeatureExtractor
 from modules.scorer import Scorer
-from modules.report_generator import ReportGenerator # NEW IMPORT
+from modules.report_generator import ReportGenerator 
 
 def main():
     try:
@@ -19,7 +19,7 @@ def main():
         print("Initializing System...")
         nlp = NLPProcessor()
         extractor = FeatureExtractor()
-        scorer = Scorer()  # <--- NEW WORKER
+        scorer = Scorer()  
 
         # Test Data
         text = "We should switch to electric cars because they reduce emissions, although the initial cost is higher for most families."
@@ -48,7 +48,7 @@ def main():
     reporter = ReportGenerator()
     file_path = reporter.save_report(text, final_score, suggestions)
     
-    print(f"\n📁 Report successfully exported to: {file_path}")
+    print(f"\n Report successfully exported to: {file_path}")
 
 if __name__ == "__main__":
     main()
