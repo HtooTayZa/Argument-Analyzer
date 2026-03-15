@@ -1,7 +1,7 @@
 import sys
 import os
 
-# FIX: Add the parent 'src' folder to the path so we can find config.py
+#  Add the parent 'src' folder to the path so we can find config.py
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from config import CLAIM_INDICATORS, PREMISE_INDICATORS
@@ -15,9 +15,9 @@ class FeatureExtractor:
         self.claims = []
         self.premises = []
         self.evidence = []
-        self.refutations = [] # <--- NEW category
+        self.refutations = [] 
 
-        # We also need to import COUNTER_INDICATORS at the top of the file!
+        #  import COUNTER_INDICATORS at the top of the file
         from config import COUNTER_INDICATORS 
 
         evidence_keywords = ["study", "research", "report", "percent", "statistics"]
