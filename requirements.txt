@@ -1,0 +1,4 @@
+python-dotenv
+google-genai
+spacy==3.7.2
+Flask==2.3.2
